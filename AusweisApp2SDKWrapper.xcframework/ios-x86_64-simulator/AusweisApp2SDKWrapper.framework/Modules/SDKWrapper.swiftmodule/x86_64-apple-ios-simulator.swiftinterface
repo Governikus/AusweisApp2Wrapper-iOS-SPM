@@ -1,0 +1,200 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AusweisApp2SDKWrapper
+import AusweisApp2
+import Foundation
+import Swift
+import SwiftUI
+import _Concurrency
+import _StringProcessing
+@available(iOS 13, *)
+public enum AA2SDKWrapper {
+  public static let workflowController: AusweisApp2SDKWrapper.WorkflowController
+}
+public protocol WorkflowCallbacks : AnyObject {
+  func onAccessRights(error: Swift.String?, accessRights: AusweisApp2SDKWrapper.AccessRights?)
+  func onApiLevel(error: Swift.String?, apiLevel: AusweisApp2SDKWrapper.ApiLevel?)
+  func onAuthenticationCompleted(authResult: AusweisApp2SDKWrapper.AuthResult)
+  func onAuthenticationStarted()
+  func onAuthenticationStartFailed(error: Swift.String)
+  func onBadState(error: Swift.String)
+  func onCertificate(certificateDescription: AusweisApp2SDKWrapper.CertificateDescription)
+  func onChangePinCompleted(changePinResult: AusweisApp2SDKWrapper.ChangePinResult?)
+  func onChangePinStarted()
+  func onEnterCan(error: Swift.String?, reader: AusweisApp2SDKWrapper.Reader)
+  func onEnterNewPin(error: Swift.String?, reader: AusweisApp2SDKWrapper.Reader)
+  func onEnterPin(error: Swift.String?, reader: AusweisApp2SDKWrapper.Reader)
+  func onEnterPuk(error: Swift.String?, reader: AusweisApp2SDKWrapper.Reader)
+  func onInfo(versionInfo: AusweisApp2SDKWrapper.VersionInfo)
+  func onInsertCard(error: Swift.String?)
+  func onInternalError(error: Swift.String)
+  func onReader(reader: AusweisApp2SDKWrapper.Reader?)
+  func onReaderList(readers: [AusweisApp2SDKWrapper.Reader]?)
+  func onStarted()
+  func onStatus(workflowProgress: AusweisApp2SDKWrapper.WorkflowProgress)
+  func onWrapperError(error: AusweisApp2SDKWrapper.WrapperError)
+}
+@_hasMissingDesignatedInitializers public class WorkflowController {
+  public static let PinLength: Swift.Int
+  public static let TransportPinLength: Swift.Int
+  public static let PukLength: Swift.Int
+  public static let CanLength: Swift.Int
+  @objc deinit
+  public func registerCallbacks(_ callbacks: AusweisApp2SDKWrapper.WorkflowCallbacks)
+  public func unregisterCallbacks(_ callbacks: AusweisApp2SDKWrapper.WorkflowCallbacks)
+  public var isStarted: Swift.Bool {
+    get
+  }
+  public func start()
+  public func stop()
+  public func accept()
+  public func cancel()
+  public func getAccessRights()
+  public func getApiLevel()
+  public func getCertificate()
+  public func getInfo()
+  public func getReader(name: Swift.String)
+  public func getReaderList()
+  public func getStatus()
+  public func interrupt()
+  public func setAccessRights(_ optionalAccessRights: [AusweisApp2SDKWrapper.AccessRight])
+  public func setApiLevel(level: Swift.Int)
+  public func setCan(_ can: Swift.String?)
+  public func setCard(name: Swift.String, simulator: AusweisApp2SDKWrapper.Simulator? = nil)
+  public func setNewPin(_ newPin: Swift.String?)
+  public func setPin(_ pin: Swift.String?)
+  public func setPuk(_ puk: Swift.String?)
+  public func startAuthentication(withTcTokenUrl tcTokenUrl: Foundation.URL, withDeveloperMode developerMode: Swift.Bool = false, withUserInfoMessages userInfoMessages: AusweisApp2SDKWrapper.AA2UserInfoMessages? = nil, withStatusMsgEnabled status: Swift.Bool = true)
+  public func startChangePin(withUserInfoMessages userInfoMessages: AusweisApp2SDKWrapper.AA2UserInfoMessages? = nil, withStatusMsgEnabled status: Swift.Bool = true)
+}
+public struct CertificateDescription {
+  public let issuerName: Swift.String
+  public let issuerUrl: Foundation.URL?
+  public let purpose: Swift.String
+  public let subjectName: Swift.String
+  public let subjectUrl: Foundation.URL?
+  public let termsOfUsage: Swift.String
+  public let validity: AusweisApp2SDKWrapper.CertificateValidity
+}
+public struct CertificateValidity {
+  public let effectiveDate: Foundation.Date
+  public let expirationDate: Foundation.Date
+}
+public struct AccessRights {
+  public let requiredRights: [AusweisApp2SDKWrapper.AccessRight]
+  public let optionalRights: [AusweisApp2SDKWrapper.AccessRight]
+  public let effectiveRights: [AusweisApp2SDKWrapper.AccessRight]
+  public let transactionInfo: Swift.String?
+  public let auxiliaryData: AusweisApp2SDKWrapper.AuxiliaryData?
+}
+public struct AuxiliaryData {
+  public let ageVerificationDate: Foundation.Date?
+  public let requiredAge: Swift.Int?
+  public let validityDate: Foundation.Date?
+  public let communityId: Swift.String?
+}
+public struct Reader {
+  public let name: Swift.String
+  public let insertable: Swift.Bool
+  public let attached: Swift.Bool
+  public let keypad: Swift.Bool
+  public let card: AusweisApp2SDKWrapper.Card?
+}
+public struct Card {
+  public let deactivated: Swift.Bool
+  public let inoperative: Swift.Bool
+  public let pinRetryCounter: Swift.Int
+}
+public struct AuthResult {
+  public let url: Foundation.URL?
+  public let result: AusweisApp2SDKWrapper.AuthResultData?
+}
+public struct ChangePinResult {
+  public let success: Swift.Bool
+}
+public struct AuthResultData {
+  public let major: Swift.String
+  public let minor: Swift.String?
+  public let language: Swift.String?
+  public let description: Swift.String?
+  public let message: Swift.String?
+  public let reason: Swift.String?
+}
+public struct WrapperError {
+  public let msg: Swift.String
+  public let error: Swift.String
+}
+public struct WorkflowProgress {
+  public let workflow: AusweisApp2SDKWrapper.WorkflowProgressType?
+  public let progress: Swift.Int?
+  public let state: Swift.String?
+  public init()
+}
+public struct VersionInfo {
+  public let name: Swift.String
+  public let implementationTitle: Swift.String
+  public let implementationVendor: Swift.String
+  public let implementationVersion: Swift.String
+  public let specificationTitle: Swift.String
+  public let specificationVendor: Swift.String
+  public let specificationVersion: Swift.String
+}
+public struct ApiLevel {
+  public let available: [Swift.Int]?
+  public let current: Swift.Int
+}
+public enum AccessRight : Swift.String {
+  case Address, BirthName, FamilyName, GivenNames, PlaceOfBirth, DateOfBirth, DoctoralDegree, ArtisticName, Pseudonym, ValidUntil, Nationality, IssuingCountry, DocumentType, ResidencePermitI, ResidencePermitII, CommunityID, AddressVerification, AgeVerification, WriteAddress, WriteCommunityID, WriteResidencePermitI, WriteResidencePermitII, CanAllowed, PinManagement
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum WorkflowProgressType : Swift.String {
+  case AUTHENTICATION
+  case CHANGE_PIN
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct AA2UserInfoMessages : Swift.Encodable {
+  public init(sessionStarted: Swift.String? = "", sessionFailed: Swift.String? = "", sessionSucceeded: Swift.String? = "", sessionInProgress: Swift.String? = "")
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct Simulator : Swift.Encodable {
+  public init(withFiles: [AusweisApp2SDKWrapper.SimulatorFile])
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SimulatorFile : Swift.Encodable {
+  public init(withFileId: Swift.String, withShortFileId: Swift.String, withContent: Swift.String)
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension AusweisApp2SDKWrapper.AuthResult {
+  public var hasError: Swift.Bool {
+    get
+  }
+}
+extension AusweisApp2SDKWrapper.AuthResultData {
+  public var isCancellationByUser: Swift.Bool {
+    get
+  }
+}
+extension Swift.String {
+  public var isNumber: Swift.Bool {
+    get
+  }
+}
+extension Foundation.URL {
+  public var isValidHttpsURL: Swift.Bool {
+    get
+  }
+}
+extension AusweisApp2SDKWrapper.AccessRight : Swift.Equatable {}
+extension AusweisApp2SDKWrapper.AccessRight : Swift.Hashable {}
+extension AusweisApp2SDKWrapper.AccessRight : Swift.RawRepresentable {}
+extension AusweisApp2SDKWrapper.WorkflowProgressType : Swift.Equatable {}
+extension AusweisApp2SDKWrapper.WorkflowProgressType : Swift.Hashable {}
+extension AusweisApp2SDKWrapper.WorkflowProgressType : Swift.RawRepresentable {}
