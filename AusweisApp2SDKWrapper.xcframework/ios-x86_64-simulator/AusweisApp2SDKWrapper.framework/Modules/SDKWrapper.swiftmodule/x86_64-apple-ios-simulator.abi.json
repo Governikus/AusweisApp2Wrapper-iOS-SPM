@@ -416,22 +416,14 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "AusweisApp2SDKWrapper.ChangePinResult?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ChangePinResult",
-                    "printedName": "AusweisApp2SDKWrapper.ChangePinResult",
-                    "usr": "s:21AusweisApp2SDKWrapper15ChangePinResultV"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "ChangePinResult",
+                "printedName": "AusweisApp2SDKWrapper.ChangePinResult",
+                "usr": "s:21AusweisApp2SDKWrapper15ChangePinResultV"
               }
             ],
             "declKind": "Func",
-            "usr": "s:21AusweisApp2SDKWrapper17WorkflowCallbacksP20onChangePinCompleted06changeH6ResultyAA0ghK0VSg_tF",
-            "mangledName": "$s21AusweisApp2SDKWrapper17WorkflowCallbacksP20onChangePinCompleted06changeH6ResultyAA0ghK0VSg_tF",
+            "usr": "s:21AusweisApp2SDKWrapper17WorkflowCallbacksP20onChangePinCompleted06changeH6ResultyAA0ghK0V_tF",
+            "mangledName": "$s21AusweisApp2SDKWrapper17WorkflowCallbacksP20onChangePinCompleted06changeH6ResultyAA0ghK0V_tF",
             "moduleName": "AusweisApp2SDKWrapper",
             "genericSig": "<τ_0_0 where τ_0_0 : AusweisApp2SDKWrapper.WorkflowCallbacks>",
             "sugared_genericSig": "<Self where Self : AusweisApp2SDKWrapper.WorkflowCallbacks>",
@@ -3528,6 +3520,67 @@
                 "declKind": "Accessor",
                 "usr": "s:21AusweisApp2SDKWrapper15ChangePinResultV7successSbvg",
                 "mangledName": "$s21AusweisApp2SDKWrapper15ChangePinResultV7successSbvg",
+                "moduleName": "AusweisApp2SDKWrapper",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "reason",
+            "printedName": "reason",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21AusweisApp2SDKWrapper15ChangePinResultV6reasonSSSgvp",
+            "mangledName": "$s21AusweisApp2SDKWrapper15ChangePinResultV6reasonSSSgvp",
+            "moduleName": "AusweisApp2SDKWrapper",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21AusweisApp2SDKWrapper15ChangePinResultV6reasonSSSgvg",
+                "mangledName": "$s21AusweisApp2SDKWrapper15ChangePinResultV6reasonSSSgvg",
                 "moduleName": "AusweisApp2SDKWrapper",
                 "implicit": true,
                 "accessorKind": "get"
@@ -7098,6 +7151,48 @@
   },
   "ConstValues": [
     {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/AusweisApp2\/AA2SdkConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 1078,
+      "length": 29,
+      "value": "\"Could not send json message\""
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/AusweisApp2\/AA2SdkConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 1297,
+      "length": 34,
+      "value": "\"Received message: \""
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/AusweisApp2\/AA2SdkConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 1330,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/AusweisApp2\/AA2SdkConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 1568,
+      "length": 30,
+      "value": "\"Could not parse json message\""
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/AusweisApp2\/MessageExtensions.swift",
+      "kind": "StringLiteral",
+      "offset": 141,
+      "length": 12,
+      "value": "\"yyyy-MM-dd\""
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/AusweisApp2\/MessageExtensions.swift",
+      "kind": "StringLiteral",
+      "offset": 1924,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
       "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/AusweisApp2\/protocol\/Commands.swift",
       "kind": "StringLiteral",
       "offset": 183,
@@ -7359,114 +7454,135 @@
     {
       "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/AusweisApp2\/protocol\/Messages.swift",
       "kind": "StringLiteral",
-      "offset": 1429,
+      "offset": 1450,
       "length": 13,
       "value": "\"VersionInfo\""
     },
     {
       "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/AusweisApp2\/protocol\/Messages.swift",
       "kind": "StringLiteral",
-      "offset": 1429,
+      "offset": 1450,
       "length": 13,
       "value": "\"VersionInfo\""
     },
     {
       "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/AusweisApp2\/protocol\/Messages.swift",
       "kind": "StringLiteral",
-      "offset": 2898,
+      "offset": 2933,
       "length": 6,
       "value": "\"Name\""
     },
     {
       "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/AusweisApp2\/protocol\/Messages.swift",
       "kind": "StringLiteral",
-      "offset": 2934,
+      "offset": 2969,
       "length": 22,
       "value": "\"Implementation-Title\""
     },
     {
       "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/AusweisApp2\/protocol\/Messages.swift",
       "kind": "StringLiteral",
-      "offset": 2987,
+      "offset": 3022,
       "length": 23,
       "value": "\"Implementation-Vendor\""
     },
     {
       "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/AusweisApp2\/protocol\/Messages.swift",
       "kind": "StringLiteral",
-      "offset": 3042,
+      "offset": 3077,
       "length": 24,
       "value": "\"Implementation-Version\""
     },
     {
       "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/AusweisApp2\/protocol\/Messages.swift",
       "kind": "StringLiteral",
-      "offset": 3095,
+      "offset": 3130,
       "length": 21,
       "value": "\"Specification-Title\""
     },
     {
       "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/AusweisApp2\/protocol\/Messages.swift",
       "kind": "StringLiteral",
-      "offset": 3146,
+      "offset": 3181,
       "length": 22,
       "value": "\"Specification-Vendor\""
     },
     {
       "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/AusweisApp2\/protocol\/Messages.swift",
       "kind": "StringLiteral",
-      "offset": 3199,
+      "offset": 3234,
       "length": 23,
       "value": "\"Specification-Version\""
     },
     {
       "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/AusweisApp2\/protocol\/Messages.swift",
       "kind": "StringLiteral",
-      "offset": 2898,
+      "offset": 2933,
       "length": 6,
       "value": "\"Name\""
     },
     {
       "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/AusweisApp2\/protocol\/Messages.swift",
       "kind": "StringLiteral",
-      "offset": 2934,
+      "offset": 2969,
       "length": 22,
       "value": "\"Implementation-Title\""
     },
     {
       "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/AusweisApp2\/protocol\/Messages.swift",
       "kind": "StringLiteral",
-      "offset": 2987,
+      "offset": 3022,
       "length": 23,
       "value": "\"Implementation-Vendor\""
     },
     {
       "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/AusweisApp2\/protocol\/Messages.swift",
       "kind": "StringLiteral",
-      "offset": 3042,
+      "offset": 3077,
       "length": 24,
       "value": "\"Implementation-Version\""
     },
     {
       "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/AusweisApp2\/protocol\/Messages.swift",
       "kind": "StringLiteral",
-      "offset": 3095,
+      "offset": 3130,
       "length": 21,
       "value": "\"Specification-Title\""
     },
     {
       "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/AusweisApp2\/protocol\/Messages.swift",
       "kind": "StringLiteral",
-      "offset": 3146,
+      "offset": 3181,
       "length": 22,
       "value": "\"Specification-Vendor\""
     },
     {
       "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/AusweisApp2\/protocol\/Messages.swift",
       "kind": "StringLiteral",
-      "offset": 3199,
+      "offset": 3234,
       "length": 23,
       "value": "\"Specification-Version\""
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 284,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 348,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 413,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowController.swift",
@@ -7498,6 +7614,34 @@
     },
     {
       "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowController.swift",
+      "kind": "StringLiteral",
+      "offset": 1602,
+      "length": 33,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowController.swift",
+      "kind": "StringLiteral",
+      "offset": 1615,
+      "length": 7,
+      "value": "\" already registered\""
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowController.swift",
+      "kind": "StringLiteral",
+      "offset": 2487,
+      "length": 36,
+      "value": "\"WorkflowController already started\""
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowController.swift",
+      "kind": "StringLiteral",
+      "offset": 2763,
+      "length": 32,
+      "value": "\"WorkflowController not started\""
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowController.swift",
       "kind": "BooleanLiteral",
       "offset": 13111,
       "length": 5,
@@ -7518,46 +7662,249 @@
       "value": "true"
     },
     {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowController.swift",
+      "kind": "StringLiteral",
+      "offset": 14758,
+      "length": 37,
+      "value": "\"AusweisApp2 SDK Wrapper not started\""
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowController.swift",
+      "kind": "StringLiteral",
+      "offset": 15893,
+      "length": 19,
+      "value": "\"Unknown bad state\""
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowController.swift",
+      "kind": "StringLiteral",
+      "offset": 16444,
+      "length": 23,
+      "value": "\"Missing reader object\""
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowController.swift",
+      "kind": "StringLiteral",
+      "offset": 16738,
+      "length": 23,
+      "value": "\"Missing reader object\""
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowController.swift",
+      "kind": "StringLiteral",
+      "offset": 17026,
+      "length": 23,
+      "value": "\"Missing reader object\""
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowController.swift",
+      "kind": "StringLiteral",
+      "offset": 17314,
+      "length": 23,
+      "value": "\"Missing reader object\""
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowController.swift",
+      "kind": "StringLiteral",
+      "offset": 17739,
+      "length": 43,
+      "value": "\"Missing or invalid certificateDescription\""
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowController.swift",
+      "kind": "StringLiteral",
+      "offset": 18156,
+      "length": 27,
+      "value": "\"Unknown SDK Wrapper error\""
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowController.swift",
+      "kind": "StringLiteral",
+      "offset": 18310,
+      "length": 24,
+      "value": "\"Unknown internal error\""
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowController.swift",
+      "kind": "StringLiteral",
+      "offset": 18927,
+      "length": 32,
+      "value": "\"Missing VersionInfo in message\""
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowController.swift",
+      "kind": "StringLiteral",
+      "offset": 19341,
+      "length": 41,
+      "value": "\"Received unknown message \""
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowController.swift",
+      "kind": "StringLiteral",
+      "offset": 19381,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
       "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowData.swift",
       "kind": "StringLiteral",
-      "offset": 7404,
+      "offset": 2722,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowData.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2762,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowData.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2801,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowData.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2836,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowData.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3520,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowData.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3562,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3609,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowData.swift",
+      "kind": "StringLiteral",
+      "offset": 5473,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowData.swift",
+      "kind": "StringLiteral",
+      "offset": 7482,
       "length": 6,
       "value": "\"AUTH\""
     },
     {
       "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowData.swift",
       "kind": "StringLiteral",
-      "offset": 7404,
+      "offset": 7482,
       "length": 6,
       "value": "\"AUTH\""
     },
     {
       "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowData.swift",
       "kind": "StringLiteral",
-      "offset": 7591,
+      "offset": 7669,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowData.swift",
       "kind": "StringLiteral",
-      "offset": 7633,
+      "offset": 7711,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowData.swift",
       "kind": "StringLiteral",
-      "offset": 7678,
+      "offset": 7756,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowData.swift",
       "kind": "StringLiteral",
-      "offset": 7724,
+      "offset": 7802,
       "length": 2,
       "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowDataExtensions.swift",
+      "kind": "StringLiteral",
+      "offset": 166,
+      "length": 19,
+      "value": "\"resultmajor#error\""
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowDataExtensions.swift",
+      "kind": "BooleanLiteral",
+      "offset": 190,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowDataExtensions.swift",
+      "kind": "StringLiteral",
+      "offset": 288,
+      "length": 20,
+      "value": "\"cancellationByUser\""
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/card\/core\/WorkflowDataExtensions.swift",
+      "kind": "BooleanLiteral",
+      "offset": 313,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/common\/URLExtensions.swift",
+      "kind": "StringLiteral",
+      "offset": 180,
+      "length": 7,
+      "value": "\"https\""
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/common\/URLExtensions.swift",
+      "kind": "BooleanLiteral",
+      "offset": 202,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/common\/URLExtensions.swift",
+      "kind": "Array",
+      "offset": 401,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/common\/URLExtensions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 433,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/governikus\/workspace\/SDKWrapper_iOS_Build\/AusweisApp2SDKWrapper\/Sources\/AusweisApp2SDKWrapper\/common\/URLExtensions.swift",
+      "kind": "BooleanLiteral",
+      "offset": 535,
+      "length": 5,
+      "value": "false"
     }
   ]
 }
