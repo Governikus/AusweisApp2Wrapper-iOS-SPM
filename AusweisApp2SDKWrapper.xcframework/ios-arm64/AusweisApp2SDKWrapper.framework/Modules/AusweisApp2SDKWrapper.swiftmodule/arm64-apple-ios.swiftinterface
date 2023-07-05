@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
 // swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AusweisApp2SDKWrapper
 import AusweisApp2
 import Foundation
@@ -40,8 +40,8 @@ public protocol WorkflowCallbacks : AnyObject {
   public static let PukLength: Swift.Int
   public static let CanLength: Swift.Int
   @objc deinit
-  public func registerCallbacks(_ callbacks: any AusweisApp2SDKWrapper.WorkflowCallbacks)
-  public func unregisterCallbacks(_ callbacks: any AusweisApp2SDKWrapper.WorkflowCallbacks)
+  public func registerCallbacks(_ callbacks: AusweisApp2SDKWrapper.WorkflowCallbacks)
+  public func unregisterCallbacks(_ callbacks: AusweisApp2SDKWrapper.WorkflowCallbacks)
   public var isStarted: Swift.Bool {
     get
   }
@@ -163,15 +163,15 @@ public enum WorkflowProgressType : Swift.String {
 }
 public struct AA2UserInfoMessages : Swift.Encodable {
   public init(sessionStarted: Swift.String? = "", sessionFailed: Swift.String? = "", sessionSucceeded: Swift.String? = "", sessionInProgress: Swift.String? = "")
-  public func encode(to encoder: any Swift.Encoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
 }
 public struct Simulator : Swift.Encodable {
   public init(withFiles: [AusweisApp2SDKWrapper.SimulatorFile])
-  public func encode(to encoder: any Swift.Encoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
 }
 public struct SimulatorFile : Swift.Encodable {
   public init(withFileId: Swift.String, withShortFileId: Swift.String, withContent: Swift.String)
-  public func encode(to encoder: any Swift.Encoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
 }
 extension AusweisApp2SDKWrapper.AuthResult {
   public var hasError: Swift.Bool {

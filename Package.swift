@@ -12,7 +12,8 @@ let package = Package(
 	dependencies: [
 		.package(
 			name: "AusweisApp2",
-			path: "../AA2SwiftPackage"
+			url: "https://github.com/Governikus/AusweisApp2-SDK-iOS",
+			from: "1.26.4"
 		)
 	],
 	targets: [
