@@ -13,7 +13,7 @@ let package = Package(
 		.package(
 			name: "AusweisApp2",
 			url: "https://github.com/Governikus/AusweisApp2-SDK-iOS",
-			from: "1.26.4"
+			.exact("1.26.5")
 		)
 	],
 	targets: [
