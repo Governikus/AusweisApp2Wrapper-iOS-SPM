@@ -14,7 +14,6 @@ public enum AA2SDKWrapper {
 }
 public protocol WorkflowCallbacks : AnyObject {
   func onAccessRights(error: Swift.String?, accessRights: AusweisApp2SDKWrapper.AccessRights?)
-  func onApiLevel(error: Swift.String?, apiLevel: AusweisApp2SDKWrapper.ApiLevel?)
   func onAuthenticationCompleted(authResult: AusweisApp2SDKWrapper.AuthResult)
   func onAuthenticationStarted()
   func onAuthenticationStartFailed(error: Swift.String)
@@ -29,6 +28,7 @@ public protocol WorkflowCallbacks : AnyObject {
   func onInfo(versionInfo: AusweisApp2SDKWrapper.VersionInfo)
   func onInsertCard(error: Swift.String?)
   func onInternalError(error: Swift.String)
+  func onPause(cause: AusweisApp2SDKWrapper.Cause)
   func onReader(reader: AusweisApp2SDKWrapper.Reader?)
   func onReaderList(readers: [AusweisApp2SDKWrapper.Reader]?)
   func onStarted()
@@ -50,8 +50,8 @@ public protocol WorkflowCallbacks : AnyObject {
   public func stop()
   public func accept()
   public func cancel()
+  public func continueWorkflow()
   public func getAccessRights()
-  public func getApiLevel()
   public func getCertificate()
   public func getInfo()
   public func getReader(name: Swift.String)
@@ -59,7 +59,6 @@ public protocol WorkflowCallbacks : AnyObject {
   public func getStatus()
   public func interrupt()
   public func setAccessRights(_ optionalAccessRights: [AusweisApp2SDKWrapper.AccessRight])
-  public func setApiLevel(level: Swift.Int)
   public func setCan(_ can: Swift.String?)
   public func setCard(name: Swift.String, simulator: AusweisApp2SDKWrapper.Simulator? = nil)
   public func setNewPin(_ newPin: Swift.String?)
@@ -102,9 +101,18 @@ public struct Reader {
   public let card: AusweisApp2SDKWrapper.Card?
 }
 public struct Card {
-  public let deactivated: Swift.Bool
-  public let inoperative: Swift.Bool
-  public let pinRetryCounter: Swift.Int
+  public let deactivated: Swift.Bool?
+  public let inoperative: Swift.Bool?
+  public let pinRetryCounter: Swift.Int?
+  public func isUnknown() -> Swift.Bool
+}
+public enum Cause : Swift.String {
+  case BadCardPosition
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
 }
 public struct AuthResult {
   public let url: Foundation.URL?
@@ -141,10 +149,6 @@ public struct VersionInfo {
   public let specificationVendor: Swift.String
   public let specificationVersion: Swift.String
 }
-public struct ApiLevel {
-  public let available: [Swift.Int]?
-  public let current: Swift.Int
-}
 public enum AccessRight : Swift.String {
   case Address, BirthName, FamilyName, GivenNames, PlaceOfBirth, DateOfBirth, DoctoralDegree, ArtisticName, Pseudonym, ValidUntil, Nationality, IssuingCountry, DocumentType, ResidencePermitI, ResidencePermitII, CommunityID, AddressVerification, AgeVerification, WriteAddress, WriteCommunityID, WriteResidencePermitI, WriteResidencePermitII, CanAllowed, PinManagement
   public init?(rawValue: Swift.String)
@@ -167,11 +171,15 @@ public struct AA2UserInfoMessages : Swift.Encodable {
   public func encode(to encoder: any Swift.Encoder) throws
 }
 public struct Simulator : Swift.Encodable {
-  public init(withFiles: [AusweisApp2SDKWrapper.SimulatorFile])
+  public init(withFiles: [AusweisApp2SDKWrapper.SimulatorFile], withKeys: [AusweisApp2SDKWrapper.SimulatorKey]? = nil)
   public func encode(to encoder: any Swift.Encoder) throws
 }
 public struct SimulatorFile : Swift.Encodable {
   public init(withFileId: Swift.String, withShortFileId: Swift.String, withContent: Swift.String)
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct SimulatorKey : Swift.Encodable {
+  public init(withId: Swift.Int, withContent: Swift.String)
   public func encode(to encoder: any Swift.Encoder) throws
 }
 extension AusweisApp2SDKWrapper.AuthResult {
@@ -194,6 +202,9 @@ extension Foundation.URL {
     get
   }
 }
+extension AusweisApp2SDKWrapper.Cause : Swift.Equatable {}
+extension AusweisApp2SDKWrapper.Cause : Swift.Hashable {}
+extension AusweisApp2SDKWrapper.Cause : Swift.RawRepresentable {}
 extension AusweisApp2SDKWrapper.AccessRight : Swift.Equatable {}
 extension AusweisApp2SDKWrapper.AccessRight : Swift.Hashable {}
 extension AusweisApp2SDKWrapper.AccessRight : Swift.RawRepresentable {}
