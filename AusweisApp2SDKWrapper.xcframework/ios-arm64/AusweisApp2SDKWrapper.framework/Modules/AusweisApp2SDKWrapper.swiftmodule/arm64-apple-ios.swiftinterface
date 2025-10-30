@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
+// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
 // swift-module-flags: -target arm64-apple-ios16.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -module-name AusweisApp2SDKWrapper
-// swift-module-flags-ignorable:  -interface-compiler-version 6.1
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
 import AusweisApp2
 import Foundation
 import Swift
@@ -14,7 +14,9 @@ public enum AA2SDKWrapper {
   public static let workflowController: AusweisApp2SDKWrapper.WorkflowController
 }
 public protocol WorkflowCallbacks : AnyObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   func onAccessRights(error: Swift.String?, accessRights: AusweisApp2SDKWrapper.AccessRights?)
+  #endif
   func onAuthenticationCompleted(authResult: AusweisApp2SDKWrapper.AuthResult)
   func onAuthenticationStarted()
   func onAuthenticationStartFailed(error: Swift.String)
@@ -22,16 +24,30 @@ public protocol WorkflowCallbacks : AnyObject {
   func onCertificate(certificateDescription: AusweisApp2SDKWrapper.CertificateDescription)
   func onChangePinCompleted(changePinResult: AusweisApp2SDKWrapper.ChangePinResult)
   func onChangePinStarted()
+  #if compiler(>=5.3) && $NonescapableTypes
   func onEnterCan(error: Swift.String?, reader: AusweisApp2SDKWrapper.Reader)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func onEnterNewPin(error: Swift.String?, reader: AusweisApp2SDKWrapper.Reader)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func onEnterPin(error: Swift.String?, reader: AusweisApp2SDKWrapper.Reader)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func onEnterPuk(error: Swift.String?, reader: AusweisApp2SDKWrapper.Reader)
+  #endif
   func onInfo(versionInfo: AusweisApp2SDKWrapper.VersionInfo)
+  #if compiler(>=5.3) && $NonescapableTypes
   func onInsertCard(error: Swift.String?)
+  #endif
   func onInternalError(error: Swift.String)
   func onPause(cause: AusweisApp2SDKWrapper.Cause)
+  #if compiler(>=5.3) && $NonescapableTypes
   func onReader(reader: AusweisApp2SDKWrapper.Reader?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func onReaderList(readers: [AusweisApp2SDKWrapper.Reader]?)
+  #endif
   func onStarted()
   func onStatus(workflowProgress: AusweisApp2SDKWrapper.WorkflowProgress)
   func onWrapperError(error: AusweisApp2SDKWrapper.WrapperError)
@@ -60,13 +76,27 @@ public protocol WorkflowCallbacks : AnyObject {
   public func getStatus()
   public func interrupt()
   public func setAccessRights(_ optionalAccessRights: [AusweisApp2SDKWrapper.AccessRight])
+  #if compiler(>=5.3) && $NonescapableTypes
   public func setCan(_ can: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func setCard(name: Swift.String, simulator: AusweisApp2SDKWrapper.Simulator? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func setNewPin(_ newPin: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func setPin(_ pin: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func setPuk(_ puk: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func startAuthentication(withTcTokenUrl tcTokenUrl: Foundation.URL, withDeveloperMode developerMode: Swift.Bool = false, withUserInfoMessages userInfoMessages: AusweisApp2SDKWrapper.AA2UserInfoMessages? = nil, withStatusMsgEnabled status: Swift.Bool = true)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func startChangePin(withUserInfoMessages userInfoMessages: AusweisApp2SDKWrapper.AA2UserInfoMessages? = nil, withStatusMsgEnabled status: Swift.Bool = true)
+  #endif
 }
 public struct CertificateDescription {
   public let issuerName: Swift.String
@@ -109,7 +139,9 @@ public struct Card {
 }
 public enum Cause : Swift.String {
   case BadCardPosition
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -152,7 +184,9 @@ public struct VersionInfo {
 }
 public enum AccessRight : Swift.String {
   case Address, BirthName, FamilyName, GivenNames, PlaceOfBirth, DateOfBirth, DoctoralDegree, ArtisticName, Pseudonym, ValidUntil, Nationality, IssuingCountry, DocumentType, ResidencePermitI, ResidencePermitII, CommunityID, AddressVerification, AgeVerification, WriteAddress, WriteCommunityID, WriteResidencePermitI, WriteResidencePermitII, CanAllowed, PinManagement
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -161,18 +195,24 @@ public enum AccessRight : Swift.String {
 public enum WorkflowProgressType : Swift.String {
   case AUTHENTICATION
   case CHANGE_PIN
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
   }
 }
 public struct AA2UserInfoMessages : Swift.Encodable {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(sessionStarted: Swift.String? = "", sessionFailed: Swift.String? = "", sessionSucceeded: Swift.String? = "", sessionInProgress: Swift.String? = "")
+  #endif
   public func encode(to encoder: any Swift.Encoder) throws
 }
 public struct Simulator : Swift.Encodable {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(withFiles: [AusweisApp2SDKWrapper.SimulatorFile], withKeys: [AusweisApp2SDKWrapper.SimulatorKey]? = nil)
+  #endif
   public func encode(to encoder: any Swift.Encoder) throws
 }
 public struct SimulatorFile : Swift.Encodable {
