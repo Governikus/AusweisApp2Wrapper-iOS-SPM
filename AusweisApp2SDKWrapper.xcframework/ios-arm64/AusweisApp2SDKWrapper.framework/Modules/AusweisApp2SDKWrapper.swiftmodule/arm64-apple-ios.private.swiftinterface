@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
+// swift-compiler-version: Apple Swift version 6.2.4 effective-5.10 (swiftlang-6.2.4.1.4 clang-1700.6.4.2)
 // swift-module-flags: -target arm64-apple-ios16.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -module-name AusweisApp2SDKWrapper
-// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.4
 import AusweisApp2
 import Foundation
 import Swift
@@ -9,7 +9,7 @@ import SwiftUI
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
-@available(iOS 16, *)
+@available(iOS 17, *)
 public enum AA2SDKWrapper {
   public static let workflowController: AusweisApp2SDKWrapper.WorkflowController
 }
@@ -218,6 +218,9 @@ public struct Simulator : Swift.Encodable {
 public struct SimulatorFile : Swift.Encodable {
   public init(withFileId: Swift.String, withShortFileId: Swift.String, withContent: Swift.String)
   public func encode(to encoder: any Swift.Encoder) throws
+}
+extension AusweisApp2SDKWrapper.SimulatorFile : Swift.Equatable {
+  public static func == (lhs: AusweisApp2SDKWrapper.SimulatorFile, rhs: AusweisApp2SDKWrapper.SimulatorFile) -> Swift.Bool
 }
 public struct SimulatorKey : Swift.Encodable {
   public init(withId: Swift.Int, withContent: Swift.String)
