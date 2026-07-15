@@ -65,7 +65,7 @@ public protocol WorkflowCallbacks : AnyObject {
   public func setNewPin(_ newPin: Swift.String?)
   public func setPin(_ pin: Swift.String?)
   public func setPuk(_ puk: Swift.String?)
-  public func startAuthentication(withTcTokenUrl tcTokenUrl: Foundation.URL, withDeveloperMode developerMode: Swift.Bool = false, withUserInfoMessages userInfoMessages: AusweisApp2SDKWrapper.AA2UserInfoMessages? = nil, withStatusMsgEnabled status: Swift.Bool = true)
+  public func startAuthentication(withTcTokenUrl tcTokenUrl: Foundation.URL, withDeveloperMode developerMode: Swift.Bool = false, withUserInfoMessages userInfoMessages: AusweisApp2SDKWrapper.AA2UserInfoMessages? = nil, withStatusMsgEnabled status: Swift.Bool = true, withCustomHeader header: [Swift.String : Swift.String]? = nil)
   public func startChangePin(withUserInfoMessages userInfoMessages: AusweisApp2SDKWrapper.AA2UserInfoMessages? = nil, withStatusMsgEnabled status: Swift.Bool = true)
 }
 public struct CertificateDescription {
